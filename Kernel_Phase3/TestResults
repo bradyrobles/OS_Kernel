@@ -1,0 +1,387 @@
+OVERALL RESULTS: 13/18 (16/18 including tentative pass) 
+TEST00 RESULTS - PASSED
+
+starting test 00 ....
+
+start3(): started.  Calling Spawn for Child1
+start3(): fork 5
+Child1(): starting
+Child1(): done
+start3(): result of wait, pid = 5, status = 9
+start3(): Parent done. Calling Terminate.
+All processes completed.
+
+
+TEST01 RESULTS - PASSED
+
+starting test 01 ....
+
+start3(): started.  Calling Spawn for Child1
+Child1(): starting
+Child1(): done
+start3(): after spawn of 5
+start3(): Parent done. Calling Terminate.
+All processes completed.
+
+
+TEST02 RESULTS - PASSED
+
+starting test 02 ....
+
+start3(): started, and immediately return'ing a -3
+All processes completed.
+
+
+TEST03 RESULTS - PASSED
+
+starting test 03 ....
+
+start3(): started.  Calling Spawn for Child1
+Child1(): starting
+Child2(): starting
+Child2(): done
+Child1(): done
+start3(): after spawn of 5
+start3(): Parent done. Calling Terminate.
+All processes completed.
+
+
+TEST10 RESULTS - TENTATIVE PASS: my current time was within 10 ms of reference
+output
+
+starting test 10 ....
+
+start3(): started
+start3(): calling Spawn for Child1a
+Child1a(): starting
+Child1a(): current time = 133
+Child1a(): current time = 138
+Child1a(): current time = 145
+Child1a(): done
+start3(): calling Spawn for Child1b
+Child1b(): starting
+Child1b(): current time = 232
+Child1b(): current time = 239
+Child1b(): current time = 246
+Child1b(): done
+start3(): calling Spawn for Child1c
+Child1c(): starting
+Child1c(): current time = 330
+Child1c(): current time = 338
+Child1c(): current time = 344
+Child1c(): done
+start3(): calling Spawn for Child2
+start3(): Parent done. Calling Terminate.
+All processes completed.
+
+
+TEST11 RESULTS - FAIL: could not get current time to replicate reference output
+
+starting test 11 ....
+
+start3(): started
+start3(): calling Spawn for Child1a
+Child1a(): starting
+Child1a(): current time = 13
+Child1a(): current time = 18
+Child1a(): current time = 25
+Child1a(): done
+start3(): calling Spawn for Child1b
+Child1b(): starting
+Child1b(): current time = 13
+Child1b(): current time = 20
+Child1b(): current time = 27
+Child1b(): done
+start3(): calling Spawn for Child1c
+Child1c(): starting
+Child1c(): current time = 10
+Child1c(): current time = 18
+Child1c(): current time = 24
+Child1c(): done
+start3(): calling Spawn for Child2
+start3(): Parent done. Calling Terminate.
+All processes completed.
+
+
+TEST12 RESULTS - TENTATIVE PASSED: Again the current time and cpu time are very
+close to reference output, varying only 10 ms
+
+starting test 12 ....
+
+start3(): started
+start3(): calling Spawn for Child1a
+Child1a(): starting
+Child1a(): current time of day = 133
+Child1a(): current CPU time = 18
+Child1a(): current time of day = 145
+Child1a(): current CPU time = 33
+Child1a(): current time of day = 162
+Child1a(): current CPU time = 51
+Child1a(): done
+start3(): calling Spawn for Child1b
+Child1b(): starting
+Child1b(): current time of day = 251
+Child1b(): current CPU time = 18
+Child1b(): current time of day = 268
+Child1b(): current CPU time = 36
+Child1b(): current time of day = 286
+Child1b(): current CPU time = 51
+Child1b(): done
+start3(): calling Spawn for Child1c
+Child1c(): starting
+Child1c(): current time of day = 374
+Child1c(): current CPU time = 20
+Child1c(): current time of day = 391
+Child1c(): current CPU time = 37
+Child1c(): current time of day = 404
+Child1c(): current CPU time = 51
+Child1c(): done
+start3(): calling Spawn for Child2
+start3(): Parent done. Calling Terminate.
+All processes completed.
+
+
+TEST13 RESULTS - PASSED
+
+starting test 13 ....
+
+start3(): started
+start3(): calling Spawn for Child1a
+Child1a(): starting
+Child1a(): pid = 5
+Child1a(): done
+start3(): calling Spawn for Child1b
+Child1b(): starting
+Child1b(): pid = 6
+Child1b(): done
+start3(): calling Spawn for Child1c
+Child1c(): starting
+Child1c(): pid = 7
+Child1c(): done
+start3(): calling Spawn for Child2
+start3(): Parent done. Calling Terminate.
+All processes completed.
+
+
+TEST14 RESULTS - PASSED
+
+starting test 14 ....
+
+start3(): started
+start3(): fork 5
+Child1(): starting
+start3(): Done.
+All processes completed.
+
+
+TEST15 RESULTS - PASSED
+
+starting test 15 ....
+
+Child1(): started
+start3(): Done.
+All processes completed.
+
+
+TEST17 RESULTS - PASSED
+
+starting test 17 ....
+
+start3(): started
+start3(): spawned process 5
+Child1() starting
+Child1(): spawned process 6
+Child2(): starting
+Child1(): child 6 returned status of 9
+Child1(): spawned process 7
+Child3(): starting
+Child1(): child 7 returned status of 10
+Child1(): done
+start3(): child 5 returned status of 9
+start3(): done
+All processes completed.
+
+
+TEST18 RESULTS - PASSED
+
+starting test 18 ....
+
+start3(): started
+start3(): spawned process 5
+Child1(): starting, pid = 5
+Child2(): starting, pid = 6
+Child2(): spawned process 7
+Child2(): spawned process 8
+Child2(): spawned process 9
+Child1(): spawned process 6
+Child1(): child 6 returned status of 10
+Child1(): spawned process 10
+Child3(): starting
+Child1(): child 10 returned status of 11
+Child1(): done
+start3(): child 5 returned status of 9
+start3(): done
+All processes completed.
+
+
+TEST19 RESULTS - TENTATIVE PASSED: elapsed time differs by 1
+
+starting test 19 ....
+
+start3(): started
+start3(): elapsed time = 8
+All processes completed.
+
+
+TEST21 RESULTS - PASSED
+
+starting test 21 ....
+
+start3(): started
+start3(): spawned process 5
+Child1(): starting, pid = 5
+Child2(): starting, pid = 6
+Child2(): spawned process 7
+Child2(): spawned process 8
+Child2(): spawned process 9
+Child1(): spawned process 6
+Child2a(): starting the code for Child2a
+Child2(): Wait result for child 7 has status 11
+Child2b(): starting the code for Child2b
+Child2(): Wait result for child 8 has status 11
+Child2c(): starting the code for Child2c
+Child2(): Wait result for child 9 has status 11
+Child1(): child 6 returned status of 10
+Child1(): done
+start3(): child 5 returned status of 9
+start3(): done
+All processes completed.
+
+
+TEST22 RESULTS - PASSED
+
+starting test 22 ....
+
+start3(): started
+start3(): spawned process 5
+Child1(): starting, pid = 5
+Child2(): starting, pid = 6
+Child2(): spawned process 7
+Child2(): terminating
+Child1(): spawned process 6
+Child1(): child 6 returned status of 10
+Child1(): done
+start3(): child 5 returned status of 9
+start3(): done
+All processes completed.
+
+
+TEST23 RESULTS - PASSED
+
+starting test 23 ....
+
+start3(): started
+start3(): spawned process 5
+Child1(): starting, pid = 5
+Child2(): starting, pid = 6
+Child2(): spawned process 7
+Child2(): spawned process 8
+Child2(): terminating
+Child1(): spawned process 6
+Child1(): child 6 returned status of 10
+Child1(): done
+start3(): child 5 returned status of 9
+start3(): done
+All processes completed.
+
+
+TEST24 RESULTS - PASSED
+
+starting test 24 ....
+
+start3(): started
+start3(): spawned process 5
+Child1(): starting, pid = 5
+Child2(): starting, pid = 6
+Child2(): spawned process 7
+Child2(): spawned process 8
+Child2(): spawned process 9
+Child1(): spawned process 6
+Child1(): child 6 returned status of 10
+Child1(): done
+start3(): child 5 returned status of 9
+start3(): done
+All processes completed.
+
+
+TEST25 RESULTS - FAILED: Child2b starts with PID 356, not 56.  Im assuming
+somewhere there is a missing "% MAXPROX" but I could NOT find it
+
+starting test 25 ....
+
+start3(): started
+start3(): spawned process 5
+Child1(): starting, pid = 5
+Child2(): starting, pid = 6
+Child2(): spawned process 7
+Child2(): spawned process 8
+Child2(): spawned process 9
+Child2(): spawned process 10
+Child2(): spawned process 11
+Child2(): spawned process 12
+Child2(): spawned process 13
+Child2(): spawned process 14
+Child2(): spawned process 15
+Child2(): spawned process 16
+Child2(): spawned process 17
+Child2(): spawned process 18
+Child2(): spawned process 19
+Child2(): spawned process 20
+Child2(): spawned process 21
+Child2(): spawned process 22
+Child2(): spawned process 23
+Child2(): spawned process 24
+Child2(): spawned process 25
+Child2(): spawned process 26
+Child2(): spawned process 27
+Child2(): spawned process 28
+Child2(): spawned process 29
+Child2(): spawned process 30
+Child2(): spawned process 31
+Child2(): spawned process 32
+Child2(): spawned process 33
+Child2(): spawned process 34
+Child2(): spawned process 35
+Child2(): spawned process 36
+Child2(): spawned process 37
+Child2(): spawned process 38
+Child2(): spawned process 39
+Child2(): spawned process 40
+Child2(): spawned process 41
+Child2(): spawned process 42
+Child2(): spawned process 43
+Child2(): spawned process 44
+Child2(): spawned process 45
+Child2(): spawned process 46
+Child2(): spawned process 47
+Child2(): spawned process 48
+Child2(): spawned process 49
+Child2(): spawned process 50
+Child2(): spawned attempt failed, pid = -1
+Child2(): spawned attempt failed, pid = -1
+Child2(): spawned attempt failed, pid = -1
+Child2(): spawned attempt failed, pid = -1
+Child2(): spawned attempt failed, pid = -1
+Child2(): spawned attempt failed, pid = -1
+Child2(): Terminating me and all my children
+Child1(): spawned process 6
+Child2b(): starting, pid = 356
+Child2c(): starting the code for Child2c
+Child2b(): spawned process 357
+Child1(): spawned process 356
+Child1(): child 356 returned status of 50
+Child1(): done
+start3(): child 5 returned status of 9
+start3(): done
+All processes completed.
+
